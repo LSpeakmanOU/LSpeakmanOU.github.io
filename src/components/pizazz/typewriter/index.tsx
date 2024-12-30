@@ -1,0 +1,59 @@
+'use client'
+import { Flex } from '@mantine/core';
+import  { useState, useEffect } from 'react';
+const traits = [
+    "programmer",
+    "bioinformatician",
+    "software developer",
+    "scientist",
+    "computational biologist"
+];
+
+const useTypewriter = (speed = 50) => {
+    const [displayText, setDisplayText] = useState('');
+    var readyToType = true;
+    function removeText(curr_text : string){
+        const backInterval = setInterval(() =>{
+            curr_text = curr_text.substring(0, curr_text.length - 1);
+            setDisplayText(curr_text)
+            if(curr_text.length == 0){
+                clearInterval(backInterval);
+                readyToType = true;
+            }
+        }, speed);
+    }
+    function type_word(text: string){
+        readyToType = false;
+        var curr_text = ""
+        setDisplayText("");
+        var i = 0;
+        const myInterval = setInterval(() =>{
+            curr_text = curr_text + text[i]
+            setDisplayText(curr_text)
+            i++;
+            if(i >= text.length){
+                clearInterval(myInterval);
+                setTimeout(()=>{
+                    removeText(curr_text);
+                }, 2000)
+            }
+        }, speed);
+    }
+    useEffect(() => {
+        var wordIdx = 0;
+        const myInterval = setInterval(() =>{
+            if(readyToType){
+                type_word(traits[wordIdx]);
+                wordIdx = (wordIdx + 1) % traits.length;
+            }
+        }, 1000)
+    }, [speed]);
+  
+    return displayText;
+  };
+export default function Typewriter() {
+    const displayText = useTypewriter(50);
+    
+    return <Flex><h2>I am a <span style={{textDecorationLine:"underline"}}>{displayText}</span></h2></Flex>
+  }
+  
