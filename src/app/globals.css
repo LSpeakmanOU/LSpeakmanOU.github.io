@@ -43,3 +43,45 @@ body {
     transform: rotate(0deg);
   }
 }
+.projdiv{
+  z-index: 1;
+}
+.projtitle{
+  z-index: 2;
+  position: absolute;
+  top: 30px;
+  left: 160px;
+}
+.grey-on-hover {
+  position: relative;
+  cursor: pointer;
+  
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+    transition: opacity .3s;
+    opacity: 0;
+    z-index: 2;
+  }
+
+  &:hover:before {
+    opacity: 1;
+  }
+}
+.projvisit{
+  z-index: 2;
+  position: absolute;
+  top: 100px;
+  left: 170px;
+}
+.projgithub{
+  z-index: 2;
+  position: absolute;
+  top: 100px;
+  left: 270px;
+}
