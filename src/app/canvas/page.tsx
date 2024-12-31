@@ -9,7 +9,6 @@ export default function Canvas(props : {}) {
       const canvas = canvasRef.current;
       let lastTime = 0;
       
-      init(canvas);
       if(canvas != null){
     
         const resizeCanvas = () => {
@@ -25,6 +24,7 @@ export default function Canvas(props : {}) {
         window.addEventListener("mouseup", mouseup);
         resizeCanvas();
         const ctx = canvas.getContext('2d');
+        init(canvas, ctx);
         const gameLoop = (timestamp : number) => {
           const deltaTime = timestamp - lastTime;
           lastTime = timestamp;
