@@ -4,7 +4,13 @@ import Info from "@/components/home";
 import Greeter from "@/components/greeter";
 import { Flex } from '@mantine/core';
 import Demo from "@/components/experimental/game";
-
+const traits = [
+  "programmer",
+  "bioinformatician",
+  "software developer",
+  "scientist",
+  "computational biologist"
+];
 
 export default function Home() {
   return (<div>
@@ -12,7 +18,7 @@ export default function Home() {
       <div style={{paddingTop:"5%"}}>
       <Greeter/>
       <Flex justify="center" style={{paddingLeft:"2%"}}>
-        <Typewriter/>
+        <Typewriter startText="I am a" elements={traits} />
       </Flex>
       <Info/>
       <Demo/>

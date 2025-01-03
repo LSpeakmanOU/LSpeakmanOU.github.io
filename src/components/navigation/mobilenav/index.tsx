@@ -42,6 +42,9 @@ export default function MobileNavbar(props : {title: string}) {
                 <Link href="/publications">
                 <Button variant="transparent" size="md" color="#BDBDBD">Publications</Button>
                 </Link>
+                <Link href="/services">
+                <Button variant="transparent" size="md" color="#BDBDBD">Services</Button>
+                </Link>
                 </Stack> )}
             </Transition>
             
