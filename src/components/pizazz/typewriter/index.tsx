@@ -1,15 +1,9 @@
 'use client'
 import { Flex } from '@mantine/core';
 import  { useState, useEffect } from 'react';
-const traits = [
-    "programmer",
-    "bioinformatician",
-    "software developer",
-    "scientist",
-    "computational biologist"
-];
 
-const useTypewriter = (speed = 50) => {
+
+const useTypewriter = (speed = 50, elements: string[]) => {
     const [displayText, setDisplayText] = useState('');
     var readyToType = true;
     function removeText(curr_text : string){
@@ -43,17 +37,17 @@ const useTypewriter = (speed = 50) => {
         var wordIdx = 0;
         const myInterval = setInterval(() =>{
             if(readyToType){
-                type_word(traits[wordIdx]);
-                wordIdx = (wordIdx + 1) % traits.length;
+                type_word(elements[wordIdx]);
+                wordIdx = (wordIdx + 1) % elements.length;
             }
         }, 1000)
     }, [speed]);
   
     return displayText;
   };
-export default function Typewriter() {
-    const displayText = useTypewriter(50);
+export default function Typewriter(props: {startText: string, elements : string[]}) {
+    const displayText = useTypewriter(50, props.elements);
     
-    return <Flex><h2>I am a <span style={{textDecorationLine:"underline"}}>{displayText}</span></h2></Flex>
+    return <Flex><h2>{props.startText} <span style={{textDecorationLine:"underline"}}>{displayText}</span></h2></Flex>
   }
   

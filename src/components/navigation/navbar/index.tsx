@@ -16,6 +16,9 @@ export default function Navbar() {
             <Link href="/publications">
             <Button variant="transparent" size="md" color="#BDBDBD">Publications</Button>
             </Link>
+            <Link href="/services">
+            <Button variant="transparent" size="md" color="#BDBDBD">Services</Button>
+            </Link>
         </div>
       </>
   }
