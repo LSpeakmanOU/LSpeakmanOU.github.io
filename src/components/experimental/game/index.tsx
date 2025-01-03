@@ -22,7 +22,7 @@ export default function Demo() {
     }, [bloopysrc]);
     useEffect(() => {
       const myInterval = setInterval(() =>{
-        setvisible(Math.floor(Math.random() * 75) == 1);
+        setvisible(Math.floor(Math.random() * 10) == 1);
     }, 8000); 
     return () => clearInterval(myInterval);
       }, [visible]);
