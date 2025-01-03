@@ -9,13 +9,5 @@ import Demo from "@/components/experimental/game";
 export default function Home() {
   return (<div>
       <Navigation title="Home"/>
-      <div style={{paddingTop:"5%"}}>
-      <Greeter/>
-      <Flex justify="center" style={{paddingLeft:"2%"}}>
-        <Typewriter/>
-      </Flex>
-      <Info/>
-      <Demo/>
-      </div>
     </div>);
 }
