@@ -24,43 +24,43 @@ export default function Projects() {
       return (<div>
         <Navigation title="Projects"/>
         <Flex justify="center" gap="xl">
-          <Preview imgsrc={pyVoxelEngine} github="https://github.com/LSpeakmanOU/VoxelEnginePython" pagelink = "/" title = "Python Voxel Engine" hover_enabled={true}/>      
-          <Preview imgsrc={undercon} github="/" pagelink = "/" title = "Under construction" hover_enabled={false}/>
-          <Preview imgsrc={undercon} github="/" pagelink = "/" title = "Under construction" hover_enabled={false}/>
+          <Preview size="large" imgsrc={pyVoxelEngine} github="https://github.com/LSpeakmanOU/VoxelEnginePython" pagelink = "/" title = "Python Voxel Engine" hover_enabled={true}/>      
+          <Preview size="large" imgsrc={undercon} github="/" pagelink = "/" title = "Under construction" hover_enabled={false}/>
+          <Preview size="large" imgsrc={undercon} github="/" pagelink = "/" title = "Under construction" hover_enabled={false}/>
         </Flex>
         <Flex justify="center" gap="xl">
-          <Preview imgsrc={undercon} github="/" pagelink = "/" title = "Under construction" hover_enabled={false}/>      
-          <Preview imgsrc={undercon} github="/" pagelink = "/" title = "Under construction" hover_enabled={false}/>
-          <Preview imgsrc={undercon} github="/" pagelink = "/" title = "Under construction" hover_enabled={false}/>
+          <Preview size="large" imgsrc={undercon} github="/" pagelink = "/" title = "Under construction" hover_enabled={false}/>      
+          <Preview size="large" imgsrc={undercon} github="/" pagelink = "/" title = "Under construction" hover_enabled={false}/>
+          <Preview size="large" imgsrc={undercon} github="/" pagelink = "/" title = "Under construction" hover_enabled={false}/>
         </Flex>
       </div>);
     case 1:
       return (<div>
         <Navigation title="Projects"/>
         <Flex justify="center" gap="xl">
-          <Preview imgsrc={pyVoxelEngine} github="https://github.com/LSpeakmanOU/VoxelEnginePython" pagelink = "/" title = "Python Voxel Engine" hover_enabled={true}/>      
-          <Preview imgsrc={undercon} github="/" pagelink = "/" title = "Under construction" hover_enabled={false}/>
+          <Preview size="large" imgsrc={pyVoxelEngine} github="https://github.com/LSpeakmanOU/VoxelEnginePython" pagelink = "/" title = "Python Voxel Engine" hover_enabled={true}/>      
+          <Preview size="large" imgsrc={undercon} github="/" pagelink = "/" title = "Under construction" hover_enabled={false}/>
           
         </Flex>
         <Flex justify="center" gap="xl">
-          <Preview imgsrc={undercon} github="/" pagelink = "/" title = "Under construction" hover_enabled={false}/>
-          <Preview imgsrc={undercon} github="/" pagelink = "/" title = "Under construction" hover_enabled={false}/>
+          <Preview size="large" imgsrc={undercon} github="/" pagelink = "/" title = "Under construction" hover_enabled={false}/>
+          <Preview size="large" imgsrc={undercon} github="/" pagelink = "/" title = "Under construction" hover_enabled={false}/>
         </Flex>
         <Flex justify="center" gap="xl">
-          <Preview imgsrc={undercon} github="/" pagelink = "/" title = "Under construction" hover_enabled={false}/>
-          <Preview imgsrc={undercon} github="/" pagelink = "/" title = "Under construction" hover_enabled={false}/>
+          <Preview size="large" imgsrc={undercon} github="/" pagelink = "/" title = "Under construction" hover_enabled={false}/>
+          <Preview size="large" imgsrc={undercon} github="/" pagelink = "/" title = "Under construction" hover_enabled={false}/>
         </Flex>
       </div>);
     case 2:
       return (<div>
       <Navigation title="Projects"/>
         <Stack>
-        <Flex justify="center"><Preview imgsrc={pyVoxelEngine} github="https://github.com/LSpeakmanOU/VoxelEnginePython" pagelink = "/" title = "Python Voxel Engine" hover_enabled={true}/></Flex>     
-        <Flex justify="center"><Preview imgsrc={undercon} github="/" pagelink = "/" title = "Under construction" hover_enabled={false}/></Flex>
-        <Flex justify="center"><Preview imgsrc={undercon} github="/" pagelink = "/" title = "Under construction" hover_enabled={false}/></Flex>
-        <Flex justify="center"><Preview imgsrc={undercon} github="/" pagelink = "/" title = "Under construction" hover_enabled={false}/></Flex>      
-        <Flex justify="center"><Preview imgsrc={undercon} github="/" pagelink = "/" title = "Under construction" hover_enabled={false}/></Flex>
-        <Flex justify="center"><Preview imgsrc={undercon} github="/" pagelink = "/" title = "Under construction" hover_enabled={false}/></Flex>
+        <Flex justify="center"><Preview size="small" imgsrc={pyVoxelEngine} github="https://github.com/LSpeakmanOU/VoxelEnginePython" pagelink = "/" title = "Python Voxel Engine" hover_enabled={true}/></Flex>     
+        <Flex justify="center"><Preview size="small" imgsrc={undercon} github="/" pagelink = "/" title = "Under construction" hover_enabled={false}/></Flex>
+        <Flex justify="center"><Preview size="small" imgsrc={undercon} github="/" pagelink = "/" title = "Under construction" hover_enabled={false}/></Flex>
+        <Flex justify="center"><Preview size="small" imgsrc={undercon} github="/" pagelink = "/" title = "Under construction" hover_enabled={false}/></Flex>      
+        <Flex justify="center"><Preview size="small" imgsrc={undercon} github="/" pagelink = "/" title = "Under construction" hover_enabled={false}/></Flex>
+        <Flex justify="center"><Preview size="small" imgsrc={undercon} github="/" pagelink = "/" title = "Under construction" hover_enabled={false}/></Flex>
         </Stack></div>)
   }
   
