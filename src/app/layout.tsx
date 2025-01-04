@@ -38,8 +38,8 @@ import "./globals.css";
 import { ColorSchemeScript, MantineProvider, mantineHtmlProps } from '@mantine/core';
 
 export const metadata = {
-  title: 'My Mantine app',
-  description: 'I have followed setup instructions carefully',
+  title: "Liam Speakman's Website",
+  description: "Liam Speakman's Website and services",
 };
 
 export default function RootLayout({
