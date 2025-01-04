@@ -1,7 +1,7 @@
 
 export default function ServiceDescription() {
 
-    return <div>
+    return <div style={{marginLeft:"20px", marginRight:"20px"}}>
         <h3>I may be able to help!</h3>
         <p>Contact me at <a className="emailStyle" href="mailto:liam.alan.speakman@gmail.com">liam.alan.speakman@gmail.com</a></p>
         <p>I am currently a PhD student at Ohio University and have a bachelors in Computer science (4.0 GPA)</p>
