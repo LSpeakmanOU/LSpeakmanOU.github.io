@@ -5,13 +5,14 @@ import CV from "@/components/home/cv";
 import Contact from "@/components/home/contact";
 import Education from "@/components/home/education";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 export default function Info() {
   const [isMobile, setIsMobile] = useState(0);
   useEffect(() => {
     const handleResize = () => {
-    setIsMobile(((window.innerWidth < 1280) ? 1 : 0) + ((window.innerWidth < 768) ? 1 : 0));
+    setIsMobile(((window.innerWidth < 1280) ? 1 : 0) + ((window.innerWidth < 868) ? 1 : 0));
     };
+    handleResize();
     window.addEventListener('resize', handleResize);
     handleResize();
 
