@@ -29,7 +29,7 @@ export default function Services() {
       return <div>
     <Navigation title="Services"/>
     <Stack justify="center" align="center">
-      <Typewriter startText="Have an idea for a " elements={jobs} />
+      <Typewriter size="large" startText="Have an idea for a " elements={jobs} />
       <Flex gap="xl" justify="center">
         <ServiceDescription/>
         <PaypalButton size="large" paymentName="Pay for services(choose amount)" 
@@ -43,7 +43,7 @@ export default function Services() {
     case 2: return <div>
     <Navigation title="Services"/>
     <Stack justify="center" align="center">
-      <Typewriter startText="Have an idea for a " elements={jobs} />
+      <Typewriter size="small" startText="Have an idea for a " elements={jobs} />
       
         <ServiceDescription/>
         <PaypalButton size="small" paymentName="Pay for services(choose amount)" 

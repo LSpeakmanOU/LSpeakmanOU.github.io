@@ -18,7 +18,7 @@ export default function Home() {
       <div style={{paddingTop:"5%"}}>
       <Greeter/>
       <Flex justify="center" style={{paddingLeft:"2%"}}>
-        <Typewriter startText="I am a" elements={traits} />
+        <Typewriter size="large" startText="I am a" elements={traits} />
       </Flex>
       <Info/>
       <Demo/>

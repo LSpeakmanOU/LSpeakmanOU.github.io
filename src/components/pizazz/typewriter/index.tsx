@@ -1,5 +1,5 @@
 'use client'
-import { Flex } from '@mantine/core';
+import { Flex,Stack } from '@mantine/core';
 import  { useState, useEffect } from 'react';
 
 
@@ -46,9 +46,14 @@ const useTypewriter = (speed = 50, elements: string[]) => {
   
     return displayText;
   };
-export default function Typewriter(props: {startText: string, elements : string[]}) {
+export default function Typewriter(props: {startText: string, elements : string[], size: string}) {
     const displayText = useTypewriter(50, props.elements);
     
-    return <Flex><h2>{props.startText} <span style={{textDecorationLine:"underline"}}>{displayText}</span></h2></Flex>
+    switch (props.size){
+        case "large":
+            return <Flex><h2>{props.startText} <span style={{textDecorationLine:"underline"}}>{displayText}</span></h2></Flex>
+        case "small":
+            return <Flex><h3>{props.startText} <span style={{textDecorationLine:"underline"}}>{displayText}</span></h3></Flex>
+    }
   }
   
