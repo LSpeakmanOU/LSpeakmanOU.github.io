@@ -9,7 +9,7 @@ import  { useState, useEffect } from 'react';
 export default function Demo() {
   const [visible, setvisible] = useState(false);
   const [bloopysrc, setbloopy] = useState(0);
-  var bloopys = [bloopy0, bloopy1];
+  const bloopys = [bloopy0, bloopy1];
    useEffect(() => {
     const myInterval = setInterval(() =>{
       if(bloopysrc == 0){

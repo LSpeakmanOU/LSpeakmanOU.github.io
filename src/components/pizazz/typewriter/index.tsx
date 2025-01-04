@@ -5,7 +5,7 @@ import  { useState, useEffect } from 'react';
 
 const useTypewriter = (speed = 50, elements: string[]) => {
     const [displayText, setDisplayText] = useState('');
-    var readyToType = true;
+    let readyToType = true;
     function removeText(curr_text : string){
         const backInterval = setInterval(() =>{
             curr_text = curr_text.substring(0, curr_text.length - 1);
@@ -16,32 +16,33 @@ const useTypewriter = (speed = 50, elements: string[]) => {
             }
         }, speed);
     }
-    function type_word(text: string){
-        readyToType = false;
-        var curr_text = ""
-        setDisplayText("");
-        var i = 0;
-        const myInterval = setInterval(() =>{
-            curr_text = curr_text + text[i]
-            setDisplayText(curr_text)
-            i++;
-            if(i >= text.length){
-                clearInterval(myInterval);
-                setTimeout(()=>{
-                    removeText(curr_text);
-                }, 2000)
-            }
-        }, speed);
-    }
+    
     useEffect(() => {
-        var wordIdx = 0;
-        const myInterval = setInterval(() =>{
+        function type_word(text: string){
+            readyToType = false;
+            let curr_text = ""
+            setDisplayText("");
+            let i = 0;
+            const myInterval = setInterval(() =>{
+                curr_text = curr_text + text[i]
+                setDisplayText(curr_text)
+                i++;
+                if(i >= text.length){
+                    clearInterval(myInterval);
+                    setTimeout(()=>{
+                        removeText(curr_text);
+                    }, 2000)
+                }
+            }, speed);
+        }
+        let wordIdx = 0;
+        setInterval(() =>{
             if(readyToType){
                 type_word(elements[wordIdx]);
                 wordIdx = (wordIdx + 1) % elements.length;
             }
         }, 1000)
-    }, [speed]);
+    }, [speed, elements, readyToType]);
   
     return displayText;
   };

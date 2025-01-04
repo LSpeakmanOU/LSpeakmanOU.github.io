@@ -1,5 +1,5 @@
 'use client'
-import { Flex, getBreakpointValue, Stack } from '@mantine/core';
+import { Flex, Stack } from '@mantine/core';
 import About from "@/components/home/about";
 import CV from "@/components/home/cv";
 import Contact from "@/components/home/contact";

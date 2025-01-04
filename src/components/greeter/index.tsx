@@ -1,6 +1,5 @@
 'use client'
 import { useState, useEffect } from 'react';
-import MobileNavbar from "@/components/navigation/mobilenav";
 import { Flex, Stack} from '@mantine/core';
 import Image from "next/image";
 import profilePic from '@/res/profile.jpg'

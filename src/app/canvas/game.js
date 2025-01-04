@@ -127,12 +127,12 @@ function new_game(){
     game_over = false;
 }
 function launch(){
-    const myInterval = setInterval(() =>{
+    setInterval(() =>{
         var temp_type = Math.floor(Math.random() * enemy_types);
         console.log(temp_type)
         enemies.push(new Enemy(Math.random() * canvas.width, Math.random() * canvas.height, enemy_w[temp_type], enemy_h[temp_type], temp_type));
     }, 1000);
-    const animInterval = setInterval(() =>{
+    setInterval(() =>{
         if(anim_frame == 0){
             anim_frame = 1;
         }else{
@@ -182,7 +182,7 @@ export function init(c, ctx){
     page_imgs[5].onload = () =>{page_elems_loaded[5] = true;}
 
 }
-export function draw(ctx, canvas, deltatime){
+export function draw(ctx, canvas){
     if(launched){
         if(music_loaded)
             bgmusic.play();
@@ -245,24 +245,24 @@ export function draw(ctx, canvas, deltatime){
     }
 }
 export function keydown(event){
+    console.log(event.key);
 }
 export function keyup(event){
     if(!launched)
         launch();
     launched = true;
-    //console.log(event.key)
+    console.log(event.key)
 }
 export function mousemove(event) {
     const rect = canvas.getBoundingClientRect();
     mx = event.clientX - rect.left;
     my = event.clientY - rect.top;
 }
-export function mousedown(event){
-    //console.log("x: " + mx + " y: " + my)
-}
+
 export function mouseup(event){
     if(launched){
         bullets.push(new Bullet(mx, my))
         playSound('res/pew.mp3')
     }
+    console.log(event);
 }

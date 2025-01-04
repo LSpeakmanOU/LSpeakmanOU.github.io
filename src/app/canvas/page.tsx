@@ -1,13 +1,12 @@
 'use client'
 import React, { useRef, useEffect} from 'react'
-import { init, draw, keydown, keyup, mousedown, mousemove, mouseup} from './game.js';
-export default function Canvas(props : {}) {
+import { init, draw, keydown, keyup, mousemove, mouseup} from './game.js';
+export default function Canvas() {
   const canvasRef = useRef(null) as React.RefObject<HTMLCanvasElement | null>;
   
 
   useEffect(() => {
       const canvas = canvasRef.current;
-      let lastTime = 0;
       
       if(canvas != null){
     
@@ -19,16 +18,13 @@ export default function Canvas(props : {}) {
         window.addEventListener("resize", resizeCanvas);        
         window.addEventListener("keydown", keydown);
         window.addEventListener("keyup", keyup);
-        window.addEventListener("mousedown", mousedown);
         window.addEventListener("mousemove", mousemove);
         window.addEventListener("mouseup", mouseup);
         resizeCanvas();
         const ctx = canvas.getContext('2d');
         init(canvas, ctx);
-        const gameLoop = (timestamp : number) => {
-          const deltaTime = timestamp - lastTime;
-          lastTime = timestamp;
-          draw(ctx, canvas, deltaTime);
+        const gameLoop = () => {
+          draw(ctx, canvas);
           requestAnimationFrame(gameLoop);
         };
         requestAnimationFrame(gameLoop);
@@ -36,7 +32,6 @@ export default function Canvas(props : {}) {
           window.removeEventListener("resize", resizeCanvas)        
           window.removeEventListener("keydown", keydown);
           window.removeEventListener("keyup", keydown);
-          window.removeEventListener("mousedown", mousedown);          
           window.removeEventListener("mousemove", mousemove);          
           window.removeEventListener("mouseup", mouseup);
 

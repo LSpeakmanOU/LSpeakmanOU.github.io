@@ -14,7 +14,7 @@ export default function Contact() {
             <Flex justify="center" gap="xs">
                 <a style={{color:"white"}} href="https://www.linkedin.com/in/liamspeakman/"><FontAwesomeIcon icon={faLinkedin} size="3x"/></a> 
                 <a style={{color:"white"}} href="https://github.com/LSpeakmanOU"><FontAwesomeIcon icon={faGithub} size="3x"/></a>
-                <a style={{color:"white"}} href="https://www.youtube.com/@monkey22mm1"><FontAwesomeIcon icon={faYoutube} size="3x"/></a>
+                <a style={{color:"white"}} href="https://www.youtube.com/@LspeakmanOU"><FontAwesomeIcon icon={faYoutube} size="3x"/></a>
                 <a style={{color:"white"}} href="https://en.wikipedia.org/wiki/User:LSpeakmanOU"><FontAwesomeIcon icon={faWikipediaW} size="3x"/></a>
             </Flex>   
            

@@ -1,4 +1,3 @@
-import style from '@/app/paypal.module.css'
 
 export default function ServiceDescription() {
 
@@ -10,14 +9,14 @@ export default function ServiceDescription() {
             <li>Software development experience(5+ years)</li>
             <li>of ML/AI experience (3+ years)</li>
             <li>of simulation development experience (7+ years)</li>
-            <li>Case by case basis work (if your problem doesn't fit any of these, feel free to ask me!)</li>
+            <li>Case by case basis work (if your problem doesn&apos;t fit any of these, feel free to ask me!)</li>
         </ul>
         <p>Currently I offer the following services:</p>
         <ul>
             <li>Webscraping/Webscrapers/Data collection</li>
             <li>Basic Discord Bots</li>
             <li>Mobile/web app development</li>
-            <li>Case by case basis work (if your problem doesn't fit any of these, feel free to ask me!)</li>
+            <li>Case by case basis work (if your problem doesn&apos;t fit any of these, feel free to ask me!)</li>
         </ul>
     </div>               
 }
