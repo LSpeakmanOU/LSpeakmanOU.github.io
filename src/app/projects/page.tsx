@@ -12,7 +12,7 @@ export default function Projects() {
   const [isMobile, setIsMobile] = useState(0);
   useEffect(() => {
     const handleResize = () => {
-    setIsMobile(((window.innerWidth < 1600) ? 1 : 0) + ((window.innerWidth < 868) ? 1 : 0));
+    setIsMobile(((window.innerWidth < 1600) ? 1 : 0) + ((window.innerWidth < 968) ? 1 : 0));
     };
     window.addEventListener('resize', handleResize);
     handleResize();
