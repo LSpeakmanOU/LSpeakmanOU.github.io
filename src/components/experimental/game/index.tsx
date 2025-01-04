@@ -7,7 +7,7 @@ import Link from 'next/link'
 import  { useState, useEffect } from 'react';
 
 export default function Demo() {
-  const [visible, setvisible] = useState(true);
+  const [visible, setvisible] = useState(false);
   const [bloopysrc, setbloopy] = useState(0);
   const bloopys = [bloopy0, bloopy1];
    useEffect(() => {
@@ -22,8 +22,7 @@ export default function Demo() {
     }, [bloopysrc]);
     useEffect(() => {
       const myInterval = setInterval(() =>{
-        setvisible(true);
-        //setvisible(Math.floor(Math.random() * 10) == 1);
+        setvisible(Math.floor(Math.random() * 10) == 1);
     }, 8000); 
     return () => clearInterval(myInterval);
       }, [visible]);

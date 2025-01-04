@@ -53,8 +53,8 @@ class Enemy{
         this.enemySpeed *= 0.99999;
         this.z -= this.enemySpeed;
         if(this.enemy_type == 0 || this.enemy_type == 7){
-            this.x = this.sx + Math.cos(this.z + this.phaseshift) * bloopy_disp        
-            this.y = this.sy + Math.sin(this.z + this.phaseshift) * bloopy_disp
+            this.x = Math.min(Math.max(this.sx + Math.cos(this.z + this.phaseshift) * bloopy_disp, 10), canvas.width-100)   
+            this.y = Math.min(Math.max(this.sy + Math.sin(this.z + this.phaseshift) * bloopy_disp, 10), canvas.height-100)
         }
         
     }
