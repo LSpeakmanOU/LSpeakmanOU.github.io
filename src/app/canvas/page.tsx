@@ -1,6 +1,6 @@
 'use client'
 import React, { useRef, useEffect} from 'react'
-import { init, draw, keydown, keyup, mousemove, mouseup} from './game.js';
+import { init, draw, keydown, keyup, mousemove, mouseup, click} from './game.js';
 export default function Canvas() {
   const canvasRef = useRef(null) as React.RefObject<HTMLCanvasElement | null>;
   
@@ -19,7 +19,9 @@ export default function Canvas() {
         window.addEventListener("keydown", keydown);
         window.addEventListener("keyup", keyup);
         window.addEventListener("mousemove", mousemove);
-        window.addEventListener("mouseup", mouseup);
+        window.addEventListener("mouseup", mouseup);          
+        window.removeEventListener("click", click);
+
         resizeCanvas();
         const ctx = canvas.getContext('2d');
         init(canvas, ctx);
@@ -34,7 +36,7 @@ export default function Canvas() {
           window.removeEventListener("keyup", keydown);
           window.removeEventListener("mousemove", mousemove);          
           window.removeEventListener("mouseup", mouseup);
-
+          window.removeEventListener("click", click);
 
         };
     } 

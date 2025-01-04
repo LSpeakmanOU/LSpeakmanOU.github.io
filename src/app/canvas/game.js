@@ -130,7 +130,7 @@ function launch(){
     setInterval(() =>{
         var temp_type = Math.floor(Math.random() * enemy_types);
         console.log(temp_type)
-        enemies.push(new Enemy(Math.random() * canvas.width, Math.random() * canvas.height, enemy_w[temp_type], enemy_h[temp_type], temp_type));
+        enemies.push(new Enemy(Math.max(Math.random() * (canvas.width-100),40), Math.random() * (canvas.height-200), enemy_w[temp_type], enemy_h[temp_type], temp_type));
     }, 1000);
     setInterval(() =>{
         if(anim_frame == 0){
@@ -237,11 +237,20 @@ export function draw(ctx, canvas){
             ctx.fillText("Score: " + score.toString(), canvas.width / 2 - 100,canvas.height / 2 + 60);
         }
     }else{            
-        ctx.font = "50px Arial";
-        ctx.fillStyle = "white";
-        if(logo_loaded)
-            ctx.drawImage(logo, canvas.width / 2 - 320,canvas.height / 2 - 200, 624, 173);
-        ctx.fillText("Press any key to start",canvas.width / 2 - 250,canvas.height / 2);
+        if(innerWidth > 948){
+            ctx.font = "50px Arial";
+            ctx.fillStyle = "white";
+            if(logo_loaded)
+                ctx.drawImage(logo, canvas.width / 2 - 320,canvas.height / 2 - 200, 624, 173);
+            ctx.fillText("Click anywhere to start",canvas.width / 2 - 250,canvas.height / 2);
+        }else{
+            ctx.font = "24px Arial";
+            ctx.fillStyle = "white";
+            if(logo_loaded)
+                ctx.drawImage(logo, canvas.width / 2 - 160,canvas.height / 2 - 100, 312, 86);
+            ctx.fillText("Click anywhere to start",canvas.width / 2 - 130,canvas.height / 2 + 50);
+        }
+        
     }
 }
 export function keydown(event){
@@ -258,11 +267,20 @@ export function mousemove(event) {
     mx = event.clientX - rect.left;
     my = event.clientY - rect.top;
 }
-
-export function mouseup(event){
+function run_click_action(event){
     if(launched){
         bullets.push(new Bullet(mx, my))
         playSound('res/pew.mp3')
+    }else{
+        launch();
+        launched = true;
     }
     console.log(event);
+}
+export function click(event){
+    run_click_action(event);
+}
+
+export function mouseup(event){
+    run_click_action(event);
 }
