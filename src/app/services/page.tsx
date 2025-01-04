@@ -14,7 +14,7 @@ const jobs = [
   "mobile app?",
 ];
 export default function Services() {
-  const [isMobile, setIsMobile] = useState(0);
+  const [isMobile, setIsMobile] = useState(2);
   useEffect(() => {
     const handleResize = () => {
     setIsMobile(((window.innerWidth < 1200) ? 1 : 0) + ((window.innerWidth < 768) ? 1 : 0));
@@ -32,7 +32,7 @@ export default function Services() {
       <Typewriter startText="Have an idea for a " elements={jobs} />
       <Flex gap="xl" justify="center">
         <ServiceDescription/>
-        <PaypalButton paymentName="Pay for services(choose amount)" 
+        <PaypalButton size="large" paymentName="Pay for services(choose amount)" 
         description="This button serves as a method of payment for individuals who have already confirmed with me that their project will/has been accomplished" 
         warning="DO NOT USE THIS BUTTON IF THE PROJECT HAS NOT BEEN DISCUSSED!!"
         />
@@ -46,7 +46,7 @@ export default function Services() {
       <Typewriter startText="Have an idea for a " elements={jobs} />
       
         <ServiceDescription/>
-        <PaypalButton paymentName="Pay for services(choose amount)" 
+        <PaypalButton size="small" paymentName="Pay for services(choose amount)" 
         description="This button serves as a method of payment for individuals who have already confirmed with me that their project will/has been accomplished" 
         warning="DO NOT USE THIS BUTTON IF THE PROJECT HAS NOT BEEN DISCUSSED!!"
         />

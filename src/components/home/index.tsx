@@ -7,7 +7,7 @@ import Education from "@/components/home/education";
 
 import { useState, useEffect } from 'react';
 export default function Info() {
-  const [isMobile, setIsMobile] = useState(0);
+  const [isMobile, setIsMobile] = useState(2);
   useEffect(() => {
     const handleResize = () => {
     setIsMobile(((window.innerWidth < 1280) ? 1 : 0) + ((window.innerWidth < 868) ? 1 : 0));

@@ -30,13 +30,23 @@
     padding-left: 20px;
     width:400px;
 }
+.paypalFlex_mobile{
+    border-radius: 10px;
+    background-color:white;
+    padding-right: 5px;
+    padding-left: 5px;
+    width:300px;
+}
 .paymentName{
     color:black;
+    text-align: center;
 }
 .description{
     color:black;
+    text-align: center;
 }
 .warning{
     color: red;
     font-weight: bold;
+    text-align: center;
 }
