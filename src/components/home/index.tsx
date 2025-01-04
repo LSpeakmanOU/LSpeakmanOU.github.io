@@ -5,7 +5,7 @@ import CV from "@/components/home/cv";
 import Contact from "@/components/home/contact";
 import Education from "@/components/home/education";
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 export default function Info() {
   const [isMobile, setIsMobile] = useState(0);
   useEffect(() => {
