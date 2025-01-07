@@ -3,7 +3,11 @@ import { Flex } from '@mantine/core';
 export default function About() {
     return <div className="infoBlock">
         <Flex justify="center" align="center"><h3>About</h3></Flex>
-        <p style={{paddingLeft:"20%",paddingRight:"20%", width:"500px"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint  occaecat cupidatat non proident, sunt in culpa qui officia deserunt  mollit anim id est laborum.</p>
+        <p style={{paddingLeft:"20%",paddingRight:"20%", width:"500px"}}>
+            I am currently a U.S. Naval Reserve veteran and Computer Science PhD student at Ohio University.<br/>
+            My research area is bioinformatics in the 3D genome specifically around supervised machine learning and genomic/epigenomic features.<br/>
+            As a hobby, I program 2D/3D games and simulations and enjoy working with sockets and low level networking.<br/>
+            </p>
     </div>
   }
   
